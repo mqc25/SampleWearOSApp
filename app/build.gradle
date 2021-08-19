@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    compileSdk 30
+    compileSdk 31
 
     defaultConfig {
         applicationId "ucla.invistahealth.testautoupdate"
@@ -24,6 +24,10 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    dataBinding {
+        enabled true
     }
 }
 

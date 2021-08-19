@@ -7,19 +7,27 @@ import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 import java.util.ArrayList;
 import java.util.concurrent.atomic.AtomicBoolean;
 
+import ucla.invistahealth.testautoupdate.R;
+import ucla.invistahealth.testautoupdate.databinding.HomeFragmentBinding;
 import ucla.invistahealth.testautoupdate.utils.HelperFunction;
+import ucla.invistahealth.testautoupdate.viewmodels.HomeViewModel;
 
 public class HomeFragment extends Fragment {
     private static String TAG = HomeFragment.class.getSimpleName();
@@ -29,6 +37,9 @@ public class HomeFragment extends Fragment {
     private Activity activity;
     public static String serialNumber;
     private NavController navController;
+    private HomeViewModel viewModel;
+
+    private HomeFragmentBinding binding;
 
 
     ActivityResultContracts.RequestMultiplePermissions requestMultiplePermissionsContract = new ActivityResultContracts.RequestMultiplePermissions();
@@ -36,9 +47,14 @@ public class HomeFragment extends Fragment {
         HelperFunction.logging("PERMISSIONS", "Launcher result: " + isGranted.toString());
         if (isGranted.containsValue(false)) {
             HelperFunction.logging("PERMISSIONS", "At least one of the permissions was not granted, launching again...");
-            resultLauncher.launch(PERMISSIONS);
+            requestPerm();
         }
     });
+
+    public void requestPerm(){
+        String[] permissions = permissionList.toArray(new String[0]);
+        resultLauncher.launch(permissions);
+    }
 
 
 
@@ -60,16 +76,35 @@ public class HomeFragment extends Fragment {
         permissionList.add(Manifest.permission.READ_EXTERNAL_STORAGE);
         permissionList.add(Manifest.permission.WRITE_EXTERNAL_STORAGE);
 
-        mPermissionResult.
-
-        requestPermissions((String[]) permissionList.toArray(), PERMISSION_REQUEST_CODE);
     }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return super.onCreateView(inflater, container, savedInstanceState);
+        binding = DataBindingUtil.inflate(
+                inflater,
+                R.layout.home_fragment,
+                container,
+                false
+        );
+        viewModel = new ViewModelProvider(this).get(HomeViewModel.class);
+        binding.setViewModel(viewModel);
+        binding.setLifecycleOwner(this.getViewLifecycleOwner());
+
+        return  binding.getRoot();
     }
 
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        navController = Navigation.findNavController(view);
+        requestPerm();
 
+        handler.postDelayed(() -> {
+            viewModel.setTextDisplay("Change text");
+            HelperFunction.logging(TAG, "Change text");
+        }, 5000);
+
+
+    }
 }
