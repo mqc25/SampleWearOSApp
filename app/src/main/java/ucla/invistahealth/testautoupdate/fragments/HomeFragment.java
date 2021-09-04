@@ -14,6 +14,7 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
@@ -22,6 +23,7 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import ucla.invistahealth.testautoupdate.R;
@@ -63,6 +65,9 @@ public class HomeFragment extends Fragment {
         super.onCreate(savedInstanceState);
         activity = requireActivity();
         handler = new Handler();
+
+        Objects.requireNonNull(((AppCompatActivity) requireActivity()).getSupportActionBar()).hide();
+
 
         permissionList = new ArrayList<>();
         permissionList.add(Manifest.permission.WAKE_LOCK);

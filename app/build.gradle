@@ -11,19 +11,32 @@ android {
         targetSdk 30
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
-        release {
+        debug {
             minifyEnabled false
+            debuggable true
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            minifyEnabled true
+            debuggable false
+            zipAlignEnabled true
+            jniDebuggable false
+            renderscriptDebuggable false
+            pseudoLocalesEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
 
     dataBinding {
@@ -45,7 +58,9 @@ dependencies {
     androidTestImplementation "androidx.navigation:navigation-testing:$nav_version"
 
     // Jetpack Compose Integration
-    implementation "androidx.navigation:navigation-compose:2.4.0-alpha07"
+    implementation "androidx.navigation:navigation-compose:2.4.0-alpha08"
+
+    implementation "androidx.multidex:multidex:2.0.1"
 
     implementation 'androidx.wear:wear:1.1.0'
     implementation 'com.google.android.support:wearable:2.8.1'

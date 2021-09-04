@@ -7,4 +7,31 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="digital_background">#000000</color>
+    <color name="dim_background">#964b4b4b</color>>
+    <color name="version">#96868686</color>>
+
+    <color name="digital_text">#ffffff</color>
+    <color name="survey_background">#7eb4f5</color>
+    <color name="survey_text">#050505</color>
+    <color name="survey_title">#383838</color>
+    <color name="card_color">#ffffff</color>
+    <color name="radio_color2">#3284bf</color>
+    <color name="radio_color">#00a5e5</color>
+    <color name="strip_button">#ffe800</color>
+    <color name="radio_text">#3e1e1b</color>
+
+    <color name="heart_red">#ff0000</color>
+
+    <color name="teal">#299bc4</color>
+    <color name="ucla_primary_blue">#00a5e5</color>
+    <color name="ucla_secondary_blue">#7eb4f5</color>
+    <color name="ucla_tertiary_blue">#3284bf</color>
+
+    <color name="ucla_dark_blue">#0c1f40</color>
+    <color name="ucla_mid_blue">#15356c</color>
+
+    <color name="loud_purple">#6047ed</color>
+    <color name="loud_pink">#e7574f</color>
 </resources>

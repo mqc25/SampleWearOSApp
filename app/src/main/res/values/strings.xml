@@ -1,3 +1,33 @@
 <resources>
-    <string name="app_name">testautoupdate</string>
+<!--    <string name="app_name">testautoupdate</string>-->
+    <string name="app_name">SARP UCLA</string>
+
+    <string name="notification_text_daily">Tap for daily survey!</string>
+    <string name="notification_text_weekly">Tap for weekly survey!</string>
+
+    <string name="scan_status"> </string>
+    <string name="time">23:59</string>
+    <string name="ucla_logo">UCLA LOGO</string>
+    <string name="version">X.X.XXX</string>
+
+    <string name="battery_level">%1$d%%</string>
+    <string name="charging_level">%1$d%% - CHARGING</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="weekly_survey_completed">WEEKLY_SURVEY_COMPLETED</string>
+    <string name="daily_survey_completed">DAILY_SURVEY_COMPLETED</string>
+
+    <string-array name="locations">
+        <item>000</item>
+        <item>001</item>
+        <item>002</item>
+        <item>003</item>
+        <item>004</item>
+        <item>005</item>
+        <item>006</item>
+        <item>007</item>
+        <item>008</item>
+        <item>009</item>
+        <item>FFF</item>
+    </string-array>
 </resources>
