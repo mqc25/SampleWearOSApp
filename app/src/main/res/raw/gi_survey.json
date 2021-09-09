@@ -1,0 +1,114 @@
+{
+	"version": 6,
+	"index" : ["Q1" , "Q2" , "Q3", "Q4", "Q5", "Q6", "Q7", "Q8", "Q9", "Q10", "Q11", "Q12", "Q13"],
+	
+	"Q1" : [ 
+		"On average per day (24 hours), how many times did you use the toilet for defecation during the previous week? Blood and slime discharge is also considered as defecation.",
+		"0 to 3 times",
+		"4 to 6 times",
+		"7 to 9 times",
+		"More than 9 times"
+	],
+	
+	
+	"Q2" : [ 
+		"On average per night, how many times did you get out of bed to use the toilet for defecation during the previous week?",
+		"Never",
+		"1 to 3 times",
+		"More than 3 times"
+	],
+	
+	
+	"Q3" : [ 
+		"During the previous week, were you able to hold up your stool for 15 minutes or longer, when you felt the urge to use the toilet",
+		"Yes",
+		"No",
+		"I don't know"
+	],
+	
+	
+	"Q4" : [ 
+		"During the previous week, did you have to make adjustments to your activities, to ensure that there was a toilet nearby?",
+		"Yes",
+		"No",
+		"I don't know"
+	],
+	
+	
+	"Q5" : [ 
+		"During the previous week, have you found stoolin your underwear?",
+		"Yes",
+		"No",
+		"I don't know"
+	],
+	
+	"Q6" : [ 
+		"During the previous week, how many times did you see blood in your stool?",
+		"Never",
+		"Much less than half of the times",
+		"A little less than half of the times",
+		"More than half of the times"
+	],
+	
+	
+	"Q7" : [ 
+		"If you would have to rate your general well-being during the previous week by giving it a number, what number would you choose? (1 = very bad, 10 = perfect)",
+		"1",
+		"2",
+		"3",
+		"4",
+		"5",
+		"6",
+		"7",
+		"8",
+		"9",
+		"10"
+	],
+	
+	
+	"Q8" : [ 
+		"During the previous week, did you have joint pain which was worse at rest than after activity?",
+        "Yes",
+		"No",
+		"I don't know"
+	],
+	
+	
+	"Q9" : [ 
+		"During the previous week, were your joints red or swollen?",
+		"Yes",
+		"No",
+		"I don't know"
+	],
+	
+	
+	"Q10" : [ 
+		"During the previous week, have you ever woken up from joint pain",
+		"Yes",
+		"No",
+		"I don't know"
+	],
+	
+	
+	"Q11" : [ 
+		"During the previous week, have you had askin disorder that has been diagnosed as erythema nodosum by your treating specialist?",
+		"Yes",
+		"No",
+		"I have a skin disorder but have not seen my specialist for it or do not know what the disorder is called."
+	],
+	
+	"Q12" : [ 
+		"During the previous week, have you had a skin disorder that has been diagnosed as pyoderma by your treating specialist?",
+		"Yes",
+		"No",
+		"I have a skin disorder but have not seen my specialist for it or do not know what the disorder is called."
+	],
+	
+	"Q13" : [ 
+		"Do you momentarily hae an eye infection, that you have seen an eye-specialist for and which your treating specialist diagnosed as uveitis?",
+		"Yes",
+		"No",
+		"I have an eye infection but have not an eye specialist for it or do not know what the infection is called."
+	]
+	
+}

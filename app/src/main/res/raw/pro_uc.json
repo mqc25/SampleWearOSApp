@@ -1,0 +1,21 @@
+{
+  "version" : 7,
+  "index" : ["Q1" , "Q2"],
+
+  "Q1" : [
+    "Please indicate how you perceive your stool frequency (Based on thelast 3 days)",
+    "Normal",
+    "1–2 more stools than normal",
+    "3–4 more stools than normal",
+    "5 + more stools than normal"
+  ],
+
+  "Q2" : [
+    "Please indicate the severity of your rectal bleeding (Based on the last3 days)",
+    "No blood seen",
+    "Streaks of blood seen with stools for half of the time",
+    "Obvious blood with stool most of the time",
+    "Blood alone passed (with no stool)"
+  ]
+
+}

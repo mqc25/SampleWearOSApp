@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="ucla.invistahealth.testautoupdate.fragments.HomeFragment"
+        android:name="ucla.invistahealth.watch_app.fragments.HomeFragment"
         android:label="home_fragment"
         tools:layout="@layout/home_fragment" />
 </navigation>

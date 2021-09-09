@@ -1,0 +1,17 @@
+{
+  "version" : 8,
+  "index" : ["Q1" , "Q2"],
+
+  "Q1" : [
+    "Number of liquid of very soft stools:",
+    "numberPicker,0,30"
+  ],
+
+  "Q2" : [
+    "Abdominal Pain",
+    "None",
+    "Mild",
+    "Moderate",
+    "Severe"
+  ]
+}

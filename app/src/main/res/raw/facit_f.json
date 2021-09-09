@@ -1,0 +1,122 @@
+{
+	"version" : 5,
+	"index" : ["Q1" , "Q2" , "Q3", "Q4", "Q5", "Q6", "Q7", "Q8", "Q9", "Q10", "Q11", "Q12", "Q13"],
+	
+	"Q1" : [ 
+		"I feel fatigued",
+		"Not at all",
+		"A little bit",
+		"Some-what",
+		"Quite a bit",
+		"Very much"
+	],
+	
+	"Q2" : [ 
+		"I feel weak all over",
+		"Not at all",
+		"A little bit",
+		"Some-what",
+		"Quite a bit",
+		"Very much"
+	],
+	
+	"Q3" : [ 
+		"I feel listless (“washed out”)",
+		"Not at all",
+		"A little bit",
+		"Some-what",
+		"Quite a bit",
+		"Very much"
+	],
+	
+	"Q4" : [ 
+		"I feel tired",
+		"Not at all",
+		"A little bit",
+		"Some-what",
+		"Quite a bit",
+		"Very much"
+	],
+	
+	"Q5" : [ 
+		"I have trouble starting things because I am tired",
+		"Not at all",
+		"A little bit",
+		"Some-what",
+		"Quite a bit",
+		"Very much"
+	],
+	
+	"Q6" : [ 
+		"I have trouble finishing things because I am tired",
+		"Not at all",
+		"A little bit",
+		"Some-what",
+		"Quite a bit",
+		"Very much"
+	],
+	
+	"Q7" : [ 
+		"I have energy",
+		"Not at all",
+		"A little bit",
+		"Some-what",
+		"Quite a bit",
+		"Very much"
+	],
+	
+	"Q8" : [ 
+		"I am able to do my usual activities",
+		"Not at all",
+		"A little bit",
+		"Some-what",
+		"Quite a bit",
+		"Very much"
+	],
+	
+	"Q9" : [ 
+		"I need to sleep during the day",
+		"Not at all",
+		"A little bit",
+		"Some-what",
+		"Quite a bit",
+		"Very much"
+	],
+	
+	"Q10" : [ 
+		"I am too tired to eat",
+		"Not at all",
+		"A little bit",
+		"Some-what",
+		"Quite a bit",
+		"Very much"
+	],
+	
+	"Q11" : [ 
+		"I need help doing my usual activities",
+		"Not at all",
+		"A little bit",
+		"Some-what",
+		"Quite a bit",
+		"Very much"
+	],
+	
+	"Q12" : [ 
+		"I am frustrated by being too tired to do the things I want to do",
+		"Not at all",
+		"A little bit",
+		"Some-what",
+		"Quite a bit",
+		"Very much"
+	],
+	
+	"Q13" : [ 
+		"I have to limit my social activity because I am tired",
+		"Not at all",
+		"A little bit",
+		"Some-what",
+		"Quite a bit",
+		"Very much"
+	]
+	
+}

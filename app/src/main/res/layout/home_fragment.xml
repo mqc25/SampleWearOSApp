@@ -7,7 +7,7 @@
     <data>
         <variable
             name="viewModel"
-            type="ucla.invistahealth.testautoupdate.viewmodels.HomeViewModel" />
+            type="ucla.invistahealth.watch_app.viewmodels.HomeViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -17,17 +17,17 @@
         tools:context=".fragments.HomeFragment">
 
 
-<!--        <TextView-->
-<!--            android:id="@+id/textView"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="@{viewModel.textDisplay}"-->
-<!--            android:textColor="@color/white"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintHorizontal_bias="0.5"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent" />-->
+        <!--        <TextView-->
+        <!--            android:id="@+id/textView"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="@{viewModel.textDisplay}"-->
+        <!--            android:textColor="@color/white"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintHorizontal_bias="0.5"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="parent" />-->
 
 
         <RelativeLayout
@@ -61,7 +61,7 @@
                 android:layout_centerInParent="true"
                 android:fontFamily="sans-serif-condensed"
                 android:maxLines="1"
-                android:text="@{viewModel.heartRate}"
+                android:text="@{viewModel.heartRate, default=`--`}"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textColor="@color/white"
@@ -91,7 +91,7 @@
                 android:layout_centerInParent="true"
                 android:fontFamily="sans-serif-condensed"
                 android:maxLines="1"
-                android:text="@{viewModel.heartRateAcc}"
+                android:text="@{viewModel.heartRateAcc, default=`--`}"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textColor="@color/white"
@@ -120,7 +120,7 @@
                 android:layout_centerInParent="true"
                 android:fontFamily="sans-serif-condensed"
                 android:maxLines="1"
-                android:text="@{viewModel.location}"
+                android:text="@{viewModel.location, default=`--`}"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textColor="@color/white"
@@ -146,7 +146,7 @@
                 android:layout_centerInParent="true"
                 android:fontFamily="sans-serif-condensed"
                 android:maxLines="1"
-                android:text="@{viewModel.steps}"
+                android:text="@{viewModel.steps, default=`--`}"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textColor="@color/white"
@@ -154,7 +154,7 @@
                 android:textSize="10sp" />
         </RelativeLayout>
 
-        <ucla.invistahealth.testautoupdate.utils.ui.StrokedTextView
+        <ucla.invistahealth.watch_app.utils.ui.StrokedTextView
             android:id="@+id/clock"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -162,7 +162,7 @@
             android:fontFamily="sans-serif"
             android:maxLines="1"
             android:minLines="1"
-            android:text="@{viewModel.time}"
+            android:text="@{viewModel.time, default=`11:59`}"
             android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textSize="48sp"
@@ -182,18 +182,18 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_gravity="center"
-            android:layout_marginTop="14dp"
+            android:layout_marginTop="78dp"
             android:layout_marginEnd="36dp"
             android:fontFamily="sans-serif-condensed"
             android:maxLines="1"
-            android:text="@{viewModel.am_pm}"
+            android:text="@{viewModel.am_pm, default=`AM`}"
             android:textAlignment="center"
             android:textAllCaps="true"
             android:textColor="@color/white"
             android:textIsSelectable="false"
             android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/heartRateAccContainer" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/battery_lvl"
@@ -203,7 +203,7 @@
             android:layout_gravity="center"
             android:fontFamily="sans-serif-condensed"
             android:maxLines="1"
-            android:text="@{viewModel.battery_lvl}"
+            android:text="@{viewModel.battery_lvl, default=`not charging`}"
             android:textAlignment="center"
             android:textAllCaps="true"
             android:textColor="@color/white"
@@ -222,7 +222,7 @@
             android:layout_marginBottom="24dp"
             android:fontFamily="sans-serif-condensed"
             android:maxLines="1"
-            android:text="@{viewModel.serialNumber}"
+            android:text="@{viewModel.serialNumber, default=`TKQ000000000`}"
             android:textAlignment="center"
             android:textAllCaps="true"
             android:textColor="@color/white"
@@ -241,7 +241,7 @@
             android:layout_marginBottom="12dp"
             android:fontFamily="sans-serif-condensed"
             android:maxLines="1"
-            android:text="@{viewModel.app_version}"
+            android:text="@{viewModel.app_version, default=`0.00.00`}"
             android:textAlignment="center"
             android:textAllCaps="true"
             android:textColor="@color/white"
@@ -251,6 +251,24 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="@{viewModel.status, default=``}"
+            android:fontFamily="sans-serif-condensed"
+            android:maxLines="1"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textIsSelectable="false"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

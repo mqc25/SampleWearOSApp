@@ -1,0 +1,76 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomForest -P 100 -I 10 -num-slots 4 -do-not-check-capabilities -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     FeatureSet
+Instances:    99232
+Attributes:   29
+              max_A
+              max_X
+              max_Y
+              max_Z
+              min_A
+              min_X
+              min_Y
+              min_Z
+              mean_A
+              mean_X
+              mean_Y
+              mean_Z
+              geo_mean_A
+              geo_mean_X
+              geo_mean_Y
+              geo_mean_Z
+              std_dev_A
+              std_dev_X
+              std_dev_Y
+              std_dev_Z
+              skew_A
+              skew_X
+              skew_Y
+              skew_Z
+              median_A
+              median_X
+              median_Y
+              median_Z
+              class
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 10 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+
+Time taken to build model: 1.58 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0.17 seconds
+
+=== Summary ===
+
+Correctly Classified Instances       12615               98.7862 %
+Incorrectly Classified Instances       155                1.2138 %
+Kappa statistic                          0.9744
+Mean absolute error                      0.0277
+Root mean squared error                  0.1049
+Relative absolute error                  5.0204 %
+Root relative squared error             17.7571 %
+Total Number of Instances            12770     
+Ignored Class Unknown Instances               3727     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.992    0.015    0.977      0.992    0.984      0.974    0.954     0.828     stationary
+                 0.985    0.008    0.995      0.985    0.990      0.974    0.992     0.992     walking
+Weighted Avg.    0.988    0.011    0.988      0.988    0.988      0.974    0.978     0.929     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 4831   39 |    a = stationary
+  116 7784 |    b = walking
+

@@ -1,0 +1,32 @@
+{
+  "version": 2,
+  "index": [
+    "Q1",
+    "Q2",
+    "Q3"
+  ],
+  "Q1": [
+    "In general, would you say your health is:",
+    "Excellent",
+    "Very Good",
+    "Good",
+    "Fair",
+    "Poor"
+  ],
+  "Q2": [
+    "In general, would you say your quality of life is:",
+    "Excellent",
+    "Very Good",
+    "Good",
+    "Fair",
+    "Poor"
+  ],
+  "Q3": [
+    "In general, how would you rate your physical health?",
+    "Excellent",
+    "Very Good",
+    "Good",
+    "Fair",
+    "Poor"
+  ]
+}

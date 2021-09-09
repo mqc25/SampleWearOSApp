@@ -1,0 +1,24 @@
+{
+	"version" : 4,
+	"index" : ["Q1" , "Q2"],
+	
+	"Q1" : [ 
+		"Crohn’s Disease: Number of liquid of very soft stools:",
+		"Days 1",
+		"Days 2",
+		"Days 3",
+		"Days 4",
+		"Days 5",
+		"Days 6",
+		"Days 7"
+	],
+	
+	"Q2" : [ 
+		"Crohn’s Disease: Abdominal Pain",
+		"None",
+		"Mild",
+		"Moderate",
+		"Severe"
+	]
+	
+}
